@@ -1,0 +1,46 @@
+.container{
+    height: 100vh;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+.vectorgraphimg{
+    width: 70%;
+    /* filter: drop-shadow(0 40px 0px rgba(0, 0, 0, 0.9)); */
+    animation: vectorgraphimg 10s infinite ease-in-out alternate;
+}
+
+@keyframes vectorgraphimg {
+    to{
+        transform:rotate(360deg)
+    }
+    
+}
+.brandbanner{
+    color: #fff;
+    font-size: 3rem;
+
+}
+.container2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container2 video{
+    border: 1px solid black;
+    width: 60%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:600px) {
+    .container2 video {
+        width: 100%;
+    }
+    .container2{
+      /* margin-top: -60px; */
+    }
+    .vectorgraphimg{
+        width: 100%;
+    }
+}
