@@ -9,11 +9,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   useDisclosure,
-  Link,
+
   VStack,
   HStack,
 } from '@chakra-ui/react';
-
+import { Link } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 
 const LinkBtn = ({ url = '/', title = 'Home', onClose }) => (
@@ -25,7 +25,7 @@ const LinkBtn = ({ url = '/', title = 'Home', onClose }) => (
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const isAuth = true;
+  const isAuth = false;
 
   const user = {
     role: 'admin',
@@ -63,14 +63,12 @@ const Header = () => {
               <LinkBtn onClose={onClose} url="/about" title="About" />
               <LinkBtn onClose={onClose} url="/contact" title="Contact Us" />
               <LinkBtn
-                // onClose={onClose}
+                onClose={onClose}
                 url="courses"
                 title="Browse All Courses"
               />
 
-                <Link to='/courses'>
-    <Button onClick={onClose} variant={'ghost'}>Browse All Courses</Button>
-  </Link>
+              
                
               <LinkBtn
                 onClose={onClose}
