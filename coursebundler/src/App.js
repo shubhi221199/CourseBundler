@@ -6,6 +6,9 @@ import Courses from './components/Courses/Courses';
 import Footer from './components/Layouts/Header/Footer/Footer';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import Forgetpassword from './components/Auth/Forgetpassword';
+import Resetpassword from './components/Auth/Resetpassword';
+import Contact from './components/Contacts/Contact';
 
 function App() {
   return (
@@ -17,10 +20,13 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/courses' element={<Courses/>}></Route>
+      <Route path='/contact' element={<Contact/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
+      <Route path='/forgetpassword' element={<Forgetpassword/>}></Route>
+      <Route path='/resetpassword/:token' element={<Resetpassword/>}></Route>
     </Routes>
-    {/* <Footer/> */}
+    <Footer/>
    
    </BrowserRouter>
   );
