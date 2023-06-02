@@ -1,11 +1,12 @@
+
 import { Box, Button, Container, FormLabel, Heading, VStack,Input, Textarea } from '@chakra-ui/react'
 import {React, useState
 } from 'react'
 import { Link } from 'react-router-dom';
-const Contact = () => {
+const Request = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [course, setCourse] = useState('');
   return (
   <Container h={'90vh'}>
       
@@ -14,7 +15,7 @@ const Contact = () => {
        
   
         <VStack h={'full'} justifyContent={'center'} spacing={'7'}>
-      <Heading children={'Contact Us'}/>
+      <Heading children={'Request New Course'}/>
 
         <form style={{ width: '100%' }}>
 
@@ -48,15 +49,15 @@ const Contact = () => {
           </Box>
 
           <Box my={'4'}>
-          <FormLabel htmlFor="message" children={'Message '} />
+          <FormLabel htmlFor="course" children={'Course '} />
           <Textarea
             required
-            id="message"
-            type='password'
-            value={message}
-            placeholder="Type your Messaage"
+            id="course"
+            type='course'
+            value={course}
+            placeholder="Request for course..."
             onChange={e => {
-              setMessage(e.target.value);
+              setCourse(e.target.value);
             
             }}
               focusBorderColor='yellow.500'
@@ -68,7 +69,7 @@ const Contact = () => {
       
          
       <Box my='4' >
-         Request for a Course? <Link to='/request'><Button variant={'link'} colorScheme='yellow'>Click</Button>{' '}
+        See Available Courses! <Link to='/courses'><Button variant={'link'} colorScheme='yellow'>Click</Button>{' '}
          here</Link>
           </Box>
     
@@ -82,4 +83,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Request
