@@ -5,13 +5,15 @@
 }
 .vectorgraphimg{
     width: 70%;
-    /* filter: drop-shadow(0 40px 0px rgba(0, 0, 0, 0.9)); */
-    animation: vectorgraphimg 10s infinite ease-in-out alternate;
+    filter: drop-shadow(0 40px 10px rgba(0, 0, 0, 0.9));
+    /* animation: vectorgraphimg 10s infinite ease-in-out alternate; */
+    animation: vectorgraphimg 1s infinite ease-in-out alternate;
 }
 
 @keyframes vectorgraphimg {
     to{
-        transform:rotate(360deg)
+        /* transform:rotate(360deg) */
+        transform: translateX(-50px);
     }
     
 }

@@ -5,6 +5,7 @@ import Header from './components/Layouts/Header/Header';
 import Courses from './components/Courses/Courses';
 import Footer from './components/Layouts/Header/Footer/Footer';
 import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/courses' element={<Courses/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
+      <Route path='/register' element={<Register/>}></Route>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
    
    </BrowserRouter>
   );
